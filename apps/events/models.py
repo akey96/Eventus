@@ -61,7 +61,8 @@ class Assistent(models.Model):
     def __unicode__(self):
         return "%s %s" % (self.assistant.username, self.event.name)
 
-class Comments(TimeStampModel):
+
+class Comment(TimeStampModel):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     event = models.ForeignKey(Event)
 
